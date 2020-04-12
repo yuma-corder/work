@@ -2,8 +2,8 @@
 <% @lists.each do |list| %>
 	<p>タイトル</p>
 	<span>
-
 		<%= link_to list.title, todolists_path(list.id) %>
-
 	</span>
+	<p>画像</p>
+	<%= attachment_image_tag list, :image, format: 'jpeg', size: "100×100"%>
 <% end %>
